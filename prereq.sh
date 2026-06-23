@@ -2,6 +2,6 @@ wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/ope
 tar -xvf openshift-client-linux.tar.gz
 sudo mv oc kubectl /usr/local/bin/
 ansible-galaxy collection install sabre1041.eda
-ansible-galaxy collection install  k8s.core
+ansible-galaxy collection install kubernetes.core
 pip3 install kubernetes
 pip3 install --user --upgrade oauthlib
