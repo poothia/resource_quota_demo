@@ -1,0 +1,13 @@
+---
+- name: Listen for newly created Namespaces
+  hosts: all
+  sources:
+    - sabre1041.eda.k8s:
+        api_version: v1
+        kind: Namespace
+  rules:
+    - name: Set Resource Quotas to a Namespace
+      condition: event.type == "ADDED"
+      action:
+        run_playbook:
+          name: set-resource-quota-on-namespace.yml
