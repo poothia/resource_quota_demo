@@ -4,3 +4,4 @@ sudo mv oc kubectl /usr/local/bin/
 ansible-galaxy collection install sabre1041.eda
 ansible-galaxy collection install  k8s.core
 pip3 install kubernetes
+pip3 install --user --upgrade oauthlib
